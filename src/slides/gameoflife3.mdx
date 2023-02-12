@@ -1,0 +1,20 @@
+---
+type: mdx
+content:
+  fullscreen: true
+order: 40
+---
+
+import { GameOfLife } from "../components/GameOfLife";
+
+<GameOfLife
+  autoplay={false}
+  cols={11}
+  rows={11}
+  initial={[
+    [6, 5],
+    [5, 5],
+    [4, 5],
+  ]}
+  withStroke
+/>

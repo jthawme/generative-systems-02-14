@@ -1,0 +1,8 @@
+:root {
+  @for $i from 1 through 20 {
+    --size-unit-#{$i}: #{$i * 5px};
+  }
+
+  --page-padding: var(--size-unit-4);
+  --bottom-clear: var(--size-unit-10);
+}

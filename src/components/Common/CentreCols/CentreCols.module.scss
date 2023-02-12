@@ -1,0 +1,19 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  .pool {
+    display: flex;
+
+    gap: 10px;
+
+    > * {
+      flex-grow: 1;
+    }
+  }
+}

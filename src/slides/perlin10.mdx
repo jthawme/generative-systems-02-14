@@ -1,0 +1,42 @@
+---
+type: mdx
+content:
+  fullscreen: true
+order: 65
+---
+
+import { CentreCols } from "../components/Common/CentreCols";
+import { RandomGraph } from "../components/RandomGraph";
+import { clamp, mapRange } from "../utils/utils";
+
+export let startingNumber = Math.floor(Math.random() * 6);
+
+<CentreCols>
+  <RandomGraph
+    cols={32}
+    renderCell={(ctx, size, height, random) => {
+      const num = Math.round(random * 6);
+      ctx.fillStyle = "blue";
+      ctx.fillRect(0, 0, size, -(height * mapRange(clamp(num + 1, 1, 6), 0, 6, 0, 1)));
+    }}
+  />
+
+<RandomGraph
+  cols={32}
+  perlin
+  renderCell={(ctx, size, height, random) => {
+    const num = random > 0 ? 1 : -1;
+    startingNumber = (startingNumber + num) % 6;
+    startingNumber = startingNumber < 0 ? (startingNumber = 5) : startingNumber;
+    ctx.fillStyle = "red";
+    console.log(startingNumber);
+    ctx.fillRect(
+      0,
+      0,
+      size,
+      -(height * mapRange(startingNumber + 1, 1, 6, 1 / 6, 1)),
+    );
+  }}
+/>
+
+</CentreCols>

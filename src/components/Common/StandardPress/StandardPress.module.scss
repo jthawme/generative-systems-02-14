@@ -1,0 +1,10 @@
+.item {
+  position: absolute;
+
+  top: calc(var(--y-pos) * 100%);
+  left: calc(var(--x-pos) * 100%);
+
+  font-size: calc(var(--size) * 1px);
+
+  transform: translate3d(-50%, -50%, 0);
+}

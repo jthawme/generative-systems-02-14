@@ -1,0 +1,14 @@
+.aside {
+  position: fixed;
+
+  bottom: var(--page-padding);
+  left: var(--page-padding);
+
+  .left {
+    display: flex;
+
+    gap: var(--size-unit-2);
+
+    font-size: var(--font-size-small);
+  }
+}

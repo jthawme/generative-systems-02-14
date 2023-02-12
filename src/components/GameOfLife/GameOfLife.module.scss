@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 100vh;
+
+  canvas {
+    outline: 1px solid red;
+  }
+}
+
+.actions {
+  display: flex;
+  padding: 5px;
+}

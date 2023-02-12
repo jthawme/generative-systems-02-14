@@ -1,0 +1,33 @@
+.main {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding-bottom: var(--bottom-clear);
+  text-align: center;
+
+  .image {
+    width: 15%;
+  }
+
+  h1,
+  h2 {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: var(--font-size-xxx-large);
+
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: var(--font-size-x-large);
+
+    margin: 0 0 0;
+  }
+}

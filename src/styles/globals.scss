@@ -1,0 +1,86 @@
+@import "~normalize.css";
+
+@import "parts/fonts";
+@import "variables/colors";
+@import "variables/sizes";
+@import "variables/type";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-normal);
+  color: var(--color-text);
+
+  // -ms-text-size-adjust: 100%;
+  // -webkit-text-size-adjust: 100%;
+  // -moz-osx-font-smoothing: grayscale;
+  // -webkit-font-smoothing: antialiased;
+
+  background-color: var(--color-bg);
+
+  line-height: 1.5;
+}
+
+input,
+button {
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+  }
+}
+
+.media-container {
+  // position: relative;
+
+  &-item {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 10%;
+
+    transform-origin: top left;
+
+    &:hover {
+      transform: scale(3);
+    }
+  }
+}

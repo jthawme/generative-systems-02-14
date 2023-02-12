@@ -1,0 +1,20 @@
+---
+type: mdx
+content:
+  fullscreen: true
+order: 53
+---
+
+import { CentreCols } from "../components/Common/CentreCols";
+import { RandomGraph } from "../components/RandomGraph";
+
+<CentreCols>
+  <RandomGraph />
+  <RandomGraph
+    perlin
+    renderCell={(ctx, size, height, random) => {
+      ctx.fillStyle = "red";
+      ctx.fillRect(0, 0, size, -(random * height));
+    }}
+  />
+</CentreCols>

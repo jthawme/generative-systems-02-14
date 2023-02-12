@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+
+  gap: 5px;
+}
+
+.col {
+  width: 20px;
+  background-color: red;
+  height: 40vh;
+
+  transform-origin: center;
+  transform: scaleY(var(--percent));
+  transition: {
+    duration: 0.15s;
+    property: transform;
+  }
+
+  .spin & {
+    width: 10px;
+    margin: 0 40px;
+    height: 100px;
+    background-color: blue;
+
+    transform: rotate(calc(var(--percent) * 360deg));
+  }
+}

@@ -1,0 +1,18 @@
+---
+type: mdx
+content:
+  fullscreen: true
+order: 50
+---
+
+import { CentreCols } from "../components/Common/CentreCols";
+import { RandomGrid } from "../components/RandomGrid";
+
+<CentreCols>
+  <RandomGrid
+    renderCell={(ctx, size, rand) => {
+      ctx.fillStyle = `rgb(${rand * 255}, ${Math.random() * 255}, 255)`;
+      ctx.fillRect(0, 0, size, size);
+    }}
+  />
+</CentreCols>

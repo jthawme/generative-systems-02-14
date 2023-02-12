@@ -1,0 +1,24 @@
+---
+type: mdx
+content:
+  fullscreen: true
+order: 61
+---
+
+import { CentreCols } from "../components/Common/CentreCols";
+import { RandomGrid } from "../components/RandomGrid";
+
+<CentreCols>
+  <RandomGrid
+    rows={200}
+    cols={200}
+    perlin
+    perlinFactor={150}
+    renderCell={(ctx, size, r) => {
+      ctx.save();
+      ctx.rotate(r * (Math.PI * 2));
+      ctx.fillRect(0, 0, size, 1);
+      ctx.restore();
+    }}
+  />
+</CentreCols>
