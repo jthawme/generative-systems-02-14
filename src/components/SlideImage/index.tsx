@@ -26,8 +26,6 @@ const SlideImage: React.FC<SlideImageProps> = ({
   const images = useMemo(() => {
     const arr = content.image ? [content.image] : content.images;
 
-    console.log(arr, content);
-
     return arr.map(
       (item) => item.childImageSharp?.gatsbyImageData || item.publicURL,
     );

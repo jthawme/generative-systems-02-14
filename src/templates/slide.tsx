@@ -57,6 +57,7 @@ export const query = graphql`
           title
           subtitle
           content
+          speed
           image {
             publicURL
             childImageSharp {
